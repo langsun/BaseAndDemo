@@ -1,48 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.sun.demo.MainActivity">
-    <include layout="@layout/public_title_view"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_get_message_code"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="#00acff"
-            android:gravity="center"
-            android:text="获取短信验证码" />
+    android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_pull_to_refresh"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:background="#00acff"
-            android:gravity="center"
-            android:text="PullToRefresh" />
-    </LinearLayout>
+    <include layout="@layout/public_title_view" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_my_dialog"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="#00acff"
-            android:gravity="center"
-            android:text="MyDialog" />
 
         <TextView
             android:id="@+id/tv_event_bus"
@@ -50,33 +17,68 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="#00acff"
             android:gravity="center"
-            android:text="EventBus" />
+            android:text="EventBus测试" />
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_notification"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="#00acff"
-            android:gravity="center"
-            android:text="Notification" />
 
         <TextView
-            android:id="@+id/tv_home_activity"
+            android:id="@+id/tv_dialog1"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:layout_marginLeft="20dp"
             android:background="#00acff"
             android:gravity="center"
-            android:text="Home" />
+            android:text="Dialog1" />
+
+        <TextView
+            android:id="@+id/tv_dialog2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="#00acff"
+            android:gravity="center"
+            android:text="Dialog2" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_dialog3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#00acff"
+            android:gravity="center"
+            android:text="Dialog3" />
+
+        <TextView
+            android:id="@+id/tv_dialog4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="#00acff"
+            android:gravity="center"
+            android:text="Dialog4" />
+    </LinearLayout>
+
 </LinearLayout>
