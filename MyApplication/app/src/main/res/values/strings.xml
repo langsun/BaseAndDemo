@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyApplication</string>
+    <string name="change_button">Change</string>
 </resources>

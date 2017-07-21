@@ -10,6 +10,7 @@ import com.example.sun.demo.activity.MyDialogActivity;
 import com.example.sun.demo.activity.NotificationActivity;
 import com.example.sun.demo.activity.PullToRefreshActivity;
 import com.example.sun.demo.base.BaseActivity;
+import com.example.sun.demo.databinding.PersonActivity;
 import com.example.sun.demo.demo.DemoActivity;
 import com.example.sun.demo.home.HomeActivity;
 
@@ -30,6 +31,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     TextView mHomeActivity;
     @Bind(R.id.tv_demo)
     TextView mDemoActivity;
+    @Bind(R.id.tv_Person)
+    TextView mPersonActivity;
     @Override
     public void setContent() {
         setContentView(R.layout.activity_main);
@@ -52,6 +55,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mNotification.setOnClickListener(this);
         mHomeActivity.setOnClickListener(this);
         mDemoActivity.setOnClickListener(this);
+        mPersonActivity.setOnClickListener(this);
     }
 
     @Override
@@ -83,6 +87,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.tv_demo:
                 startActivity(new Intent(MainActivity.this, DemoActivity.class));
+                break;
+            case R.id.tv_Person:
+                startActivity(new Intent(MainActivity.this, PersonActivity.class));
                 break;
         }
     }

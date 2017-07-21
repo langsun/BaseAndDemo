@@ -95,13 +95,13 @@
             android:text="Demo" />
 
         <TextView
-            android:id="@+id/tv_none"
+            android:id="@+id/tv_Person"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:layout_marginLeft="20dp"
             android:background="#00acff"
             android:gravity="center"
-            android:text="none" />
+            android:text="PersonActivity" />
     </LinearLayout>
 </LinearLayout>
