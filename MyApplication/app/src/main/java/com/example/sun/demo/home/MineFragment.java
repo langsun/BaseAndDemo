@@ -35,6 +35,5 @@ public class MineFragment extends BaseFragment {
 
     @OnClick(R.id.tv_mine_fragment)
     public void myOnClick() {
-        startActivity(new Intent(getActivity(), DemoActivity.class));
     }
 }

@@ -16,6 +16,8 @@ import butterknife.OnClick;
 public class DemoActivity extends BaseActivity {
     @Bind(R.id.tv_pop_activity)
     TextView mPopupActivity;
+    @Bind(R.id.tv_ImageLoader_activity)
+    TextView mImageLoaderActivity;
     @Override
     public void setContent() {
         setContentView(R.layout.demo_activity);
@@ -34,5 +36,10 @@ public class DemoActivity extends BaseActivity {
     @OnClick(R.id.tv_pop_activity)
     public void PopActivity(){
         startActivity(new Intent(DemoActivity.this,A_MyPopupWindowActivity.class));
+    }
+    @OnClick(R.id.tv_ImageLoader_activity)
+    public void ImageLoaderActivity(){
+        startActivity(new Intent(DemoActivity.this,B_ImageLoaderActivity.class));
+
     }
 }

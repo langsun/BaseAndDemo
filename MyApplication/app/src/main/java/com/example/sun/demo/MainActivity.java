@@ -10,6 +10,7 @@ import com.example.sun.demo.activity.MyDialogActivity;
 import com.example.sun.demo.activity.NotificationActivity;
 import com.example.sun.demo.activity.PullToRefreshActivity;
 import com.example.sun.demo.base.BaseActivity;
+import com.example.sun.demo.demo.DemoActivity;
 import com.example.sun.demo.home.HomeActivity;
 
 import butterknife.Bind;
@@ -27,6 +28,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     TextView mNotification;
     @Bind(R.id.tv_home_activity)
     TextView mHomeActivity;
+    @Bind(R.id.tv_demo)
+    TextView mDemoActivity;
     @Override
     public void setContent() {
         setContentView(R.layout.activity_main);
@@ -48,6 +51,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mEventBus.setOnClickListener(this);
         mNotification.setOnClickListener(this);
         mHomeActivity.setOnClickListener(this);
+        mDemoActivity.setOnClickListener(this);
     }
 
     @Override
@@ -76,6 +80,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.tv_home_activity:
                 Intent intent6 = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent6);
+                break;
+            case R.id.tv_demo:
+                startActivity(new Intent(MainActivity.this, DemoActivity.class));
                 break;
         }
     }
