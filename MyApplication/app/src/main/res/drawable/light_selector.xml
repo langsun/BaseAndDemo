@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/btn_light_off" android:state_activated="true"/>
+    <item >
+        <level-list>
+            <item android:drawable="@drawable/btn_light_off" android:maxLevel="0"/>
+            <item android:drawable="@drawable/btn_light_weak" android:maxLevel="1"/>
+            <item android:drawable="@drawable/btn_light_strong" android:maxLevel="2"/>
+        </level-list>
+    </item>
+
+</selector>

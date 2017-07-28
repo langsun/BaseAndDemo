@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MyApplication</string>
     <string name="change_button">Change</string>
+    <string-array name="light">
+        <item>关</item>
+        <item>弱</item>
+        <item>强</item>
+    </string-array>
 </resources>

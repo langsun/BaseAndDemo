@@ -8,6 +8,7 @@ public class Person {
     private String name;
     private String gender;
     private int age;
+    private int light;
 
     public String getName() {
         return name;
@@ -36,12 +37,22 @@ public class Person {
         return this;
     }
 
+    public int getLight() {
+        return light;
+    }
+
+    public Person setLight(int light) {
+        this.light = light;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", age=" + age +
+                ", light=" + light +
                 '}';
     }
 }
