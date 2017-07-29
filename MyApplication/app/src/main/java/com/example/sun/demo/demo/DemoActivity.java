@@ -18,6 +18,8 @@ public class DemoActivity extends BaseActivity {
     TextView mPopupActivity;
     @Bind(R.id.tv_ImageLoader_activity)
     TextView mImageLoaderActivity;
+    @Bind(R.id.tv_Ripple_Activity)
+    TextView mRippleActivity;
     @Override
     public void setContent() {
         setContentView(R.layout.demo_activity);
@@ -41,5 +43,9 @@ public class DemoActivity extends BaseActivity {
     public void ImageLoaderActivity(){
         startActivity(new Intent(DemoActivity.this,B_ImageLoaderActivity.class));
 
+    }
+    @OnClick(R.id.tv_Ripple_Activity)
+    public void RippleActivity(){
+        startActivity(new Intent(DemoActivity.this,C_RippleActivity.class));
     }
 }

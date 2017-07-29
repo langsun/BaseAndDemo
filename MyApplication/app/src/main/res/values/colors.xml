@@ -10,4 +10,7 @@
     <color name="button_blue_color">#00acff</color>
     <color name="dialog_title_text_color">#6b6b6b</color>
     <color name="change_button">#00acff</color>
+
+    <!-- 水波纹效果 -->
+    <color name="rippelColor">#CCCCCC</color>
 </resources>

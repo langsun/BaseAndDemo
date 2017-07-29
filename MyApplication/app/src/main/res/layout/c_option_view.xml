@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.sun.demo.demo.C_RippleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#119999">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_center"
+            style="@style/ItemTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/iv_left"/>
+
+        <ImageView
+            android:id="@+id/iv_new_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_center"
+            android:src="@drawable/new_flag_icon_2"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_rigth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_rigth"
+            android:textColor="#999999"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</com.example.sun.demo.demo.C_RippleView>
