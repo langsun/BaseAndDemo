@@ -48,4 +48,8 @@ public class DemoActivity extends BaseActivity {
     public void RippleActivity(){
         startActivity(new Intent(DemoActivity.this,C_RippleActivity.class));
     }
+    @OnClick(R.id.tv_Timer_Activity)
+    public void TimerActivity(){
+        startActivity(new Intent(DemoActivity.this,D_TimerActivity.class));
+    }
 }

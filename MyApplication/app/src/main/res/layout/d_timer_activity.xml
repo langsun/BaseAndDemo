@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_timer_test"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:background="#00acff" />
+
+    <TextView
+        android:id="@+id/tv_timer_test1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="#00acff"
+        android:gravity="center"
+        android:text="test" />
+    <TextView
+        android:id="@+id/tv_timer_test2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="#00acff"
+        android:gravity="center"
+        android:text="Thread" />
+
+    <TextView
+        android:id="@+id/tv_timer_test3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="#00acff"
+        android:gravity="center"
+        android:text="Runnable" />
+
+</LinearLayout>
