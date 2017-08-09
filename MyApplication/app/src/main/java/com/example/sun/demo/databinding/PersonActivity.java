@@ -1,13 +1,18 @@
 package com.example.sun.demo.databinding;
 
 import android.databinding.DataBindingUtil;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-import com.example.sun.demo.databinding.PersonActivityBinding;
 
 import com.example.sun.demo.R;
 import com.example.sun.demo.base.BaseActivity;
+import com.example.sun.demo.event.DataBindingEvent;
+
+import java.util.Random;
+
+import de.greenrobot.event.EventBus;
+import de.greenrobot.event.Subscribe;
+import de.greenrobot.event.ThreadMode;
 
 /**
  * Created by sun on 17/7/21.
@@ -23,11 +28,7 @@ public class PersonActivity extends BaseActivity {
     public void setContent() {
         binding = DataBindingUtil.setContentView(this, R.layout.person_activity);
         binding.setPersonActivity(this);
-        Log.e("........","Log.e");
-        Log.d("........","Log.d");
-        Log.i("........","Log.i");
-        Log.v("........","Log.v");
-        Log.w("........","Log.w");
+        EventBus.getDefault().register(this);
     }
 
     @Override
@@ -47,19 +48,33 @@ public class PersonActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_change:
-                person.setName("李四");
-                person.setGender("女");
-                person.setAge(23);
-                person.setLight(1);
+                Random random = new Random();
+                int age = random.nextInt(100) + 1;
+                person.setName("李四" + age);
+                person.setGender(age % 2 == 0 ? "女" : "男");
+                person.setAge(age);
+                person.setLight(random.nextInt(2));
                 Toast.makeText(PersonActivity.this, person.toString(), Toast.LENGTH_LONG).show();
                 updateView();
                 break;
         }
     }
 
-    private void updateView(){
+    @Subscribe(threadMode = ThreadMode.MainThread)
+    public void changePersonData(DataBindingEvent dataBindingEvent) {
+        if (dataBindingEvent != null)
+            person = dataBindingEvent.person;
+        updateView();
+    }
+
+    private void updateView() {
         binding.setPerson(person);
         binding.executePendingBindings();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
 }

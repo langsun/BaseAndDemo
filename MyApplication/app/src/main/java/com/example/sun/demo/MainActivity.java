@@ -10,11 +10,16 @@ import com.example.sun.demo.activity.MyDialogActivity;
 import com.example.sun.demo.activity.NotificationActivity;
 import com.example.sun.demo.activity.PullToRefreshActivity;
 import com.example.sun.demo.base.BaseActivity;
+import com.example.sun.demo.databinding.Person;
 import com.example.sun.demo.databinding.PersonActivity;
 import com.example.sun.demo.demo.DemoActivity;
+import com.example.sun.demo.event.DataBindingEvent;
 import com.example.sun.demo.home.HomeActivity;
 
+import java.util.Random;
+
 import butterknife.Bind;
+import de.greenrobot.event.EventBus;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Bind(R.id.tv_get_message_code)
@@ -89,9 +94,34 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(MainActivity.this, DemoActivity.class));
                 break;
             case R.id.tv_Person:
+                sendDataBindingEvent();
                 startActivity(new Intent(MainActivity.this, PersonActivity.class));
                 break;
         }
+    }
+
+    private void sendDataBindingEvent() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Random random = new Random();
+                Person person = new Person();
+                for (int i=0;i<10;i++){
+                    int age = random.nextInt(100) + 1;
+                    person.setName("李四" + age);
+                    person.setGender(age % 2 == 0 ? "女" : "男");
+                    person.setAge(age);
+                    person.setLight(random.nextInt(2));
+                    EventBus.getDefault().post(new DataBindingEvent(DemoActivity.class, person));
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        }).start();
     }
 
 
