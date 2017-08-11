@@ -103,5 +103,28 @@
             android:background="#00acff"
             android:gravity="center"
             android:text="PersonActivity" />
+    </LinearLayout>    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_factory_activity"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#00acff"
+            android:gravity="center"
+            android:text="FactoryActivity" />
+
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:background="#00acff"
+            android:gravity="center"
+            android:text="待定" />
     </LinearLayout>
 </LinearLayout>

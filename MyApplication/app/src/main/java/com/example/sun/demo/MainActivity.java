@@ -15,6 +15,7 @@ import com.example.sun.demo.databinding.PersonActivity;
 import com.example.sun.demo.demo.DemoActivity;
 import com.example.sun.demo.event.DataBindingEvent;
 import com.example.sun.demo.home.HomeActivity;
+import com.example.sun.demo.javaDesignPattern.FactoryActivity;
 
 import java.util.Random;
 
@@ -38,6 +39,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     TextView mDemoActivity;
     @Bind(R.id.tv_Person)
     TextView mPersonActivity;
+    @Bind(R.id.tv_factory_activity)
+    TextView mFactoryActivity;
     @Override
     public void setContent() {
         setContentView(R.layout.activity_main);
@@ -61,6 +64,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mHomeActivity.setOnClickListener(this);
         mDemoActivity.setOnClickListener(this);
         mPersonActivity.setOnClickListener(this);
+        mFactoryActivity.setOnClickListener(this);
     }
 
     @Override
@@ -96,6 +100,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.tv_Person:
                 sendDataBindingEvent();
                 startActivity(new Intent(MainActivity.this, PersonActivity.class));
+                break;
+            case R.id.tv_factory_activity:
+                startActivity(new Intent(MainActivity.this, FactoryActivity.class));
                 break;
         }
     }

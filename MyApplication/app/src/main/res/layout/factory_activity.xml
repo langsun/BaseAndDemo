@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="这里显示描述信息"/>
+
+    <TextView
+        android:id="@+id/tv_simple_factory"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#00acff"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="简单工厂模式" />
+
+    <TextView
+        android:id="@+id/tv_factory_method"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#00acff"
+        android:gravity="center"
+        android:text="工厂方法模式" />
+
+    <TextView
+        android:id="@+id/tv_abstract_factory"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#00acff"
+        android:gravity="center"
+        android:text="抽象工厂模式" />
+
+</LinearLayout>
