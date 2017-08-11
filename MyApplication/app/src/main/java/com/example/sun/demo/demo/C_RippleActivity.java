@@ -1,6 +1,7 @@
 package com.example.sun.demo.demo;
 
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,8 @@ public class C_RippleActivity extends BaseActivity {
     C_OptionItemView mCOptionItemViewSetOnLongClickListener;
     @Bind(R.id.c_option_item_view4)
     C_OptionItemView mCOptionItemViewSet2ClickListener;
+    @Bind(R.id.c_option_item_view5)
+    C_OptionItemView2 mView2;
 
     @Bind(R.id.tv)
     TextView mTextView;
@@ -65,14 +68,14 @@ public class C_RippleActivity extends BaseActivity {
         });
 
 
-        mCOptionItemViewSetOnLongClickListener.setOptionItemViewLongClickListener("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg", "测试", R.drawable.more, new View.OnLongClickListener() {
+        mCOptionItemViewSetOnLongClickListener.setOptionItemViewLongClickListener("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg", "onLongClickListener", R.drawable.more, new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 Toast.makeText(C_RippleActivity.this, "setOptionItemViewLongClickListener", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
-        mCOptionItemViewSet2ClickListener.setOptionItemView2ClickListener("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg", "测试", R.drawable.more, new View.OnClickListener() {
+        mCOptionItemViewSet2ClickListener.setOptionItemView2ClickListener("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg", "2ClickListener", R.drawable.more, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(C_RippleActivity.this, "OptionItemView2ClickListener的OnClickListener", Toast.LENGTH_LONG).show();
@@ -86,6 +89,7 @@ public class C_RippleActivity extends BaseActivity {
                     }
                 });
 
+        mView2.addView(useBuilderModle());
         mTextView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -94,5 +98,18 @@ public class C_RippleActivity extends BaseActivity {
             }
         });
 
+    }
+
+    private C_OptionItemView2 useBuilderModle() {
+        C_OptionItemView2.Builder builder = new C_OptionItemView2.Builder(C_RippleActivity.this);
+       return builder.setLeftImage("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg")
+                .setRightImage(R.drawable.more)
+                .setDescription("使用Builder模式")
+                .setOnClickListeners(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(C_RippleActivity.this, "使用Builder模式成功", Toast.LENGTH_LONG).show();
+                    }
+                }).create();
     }
 }
