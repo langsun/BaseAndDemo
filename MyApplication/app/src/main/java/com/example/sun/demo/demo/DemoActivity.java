@@ -20,6 +20,8 @@ public class DemoActivity extends BaseActivity {
     TextView mImageLoaderActivity;
     @Bind(R.id.tv_Ripple_Activity)
     TextView mRippleActivity;
+    @Bind(R.id.tv_RecycleViewActivity)
+    TextView mRecycleViewActivity;
     @Override
     public void setContent() {
         setContentView(R.layout.demo_activity);
@@ -51,5 +53,9 @@ public class DemoActivity extends BaseActivity {
     @OnClick(R.id.tv_Timer_Activity)
     public void TimerActivity(){
         startActivity(new Intent(DemoActivity.this,D_TimerActivity.class));
+    }
+    @OnClick(R.id.tv_RecycleViewActivity)
+    public void RecycleViewActivity(){
+        startActivity(new Intent(DemoActivity.this,E_RecycleViewActivity.class));
     }
 }
