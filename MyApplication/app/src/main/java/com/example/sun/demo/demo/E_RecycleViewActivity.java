@@ -68,17 +68,17 @@ public class E_RecycleViewActivity extends BaseActivity {
         private final ImageView icon;
         private final TextView name;
 
-        public RecycleViewHolder(View itemView) {
-            super(itemView);
-            itemView = LayoutInflater.from(itemView.getContext()).inflate(R.layout.e_recycle_view_item, itemView, false);
-            icon = (ImageView) itemView.findViewById(R.id.tv_recycle_view_item);
-            name = (TextView) itemView.findViewById(R.id.tv_name);
-        }
-
-//        public RecycleViewHolder(ViewGroup parent) {
-//            super(LayoutInflater.from(parent.getContext()).inflate(R.layout.e_recycle_view_item, parent, false));
+//        public RecycleViewHolder(View itemView) {
+//            super(itemView);
+//            itemView = LayoutInflater.from(itemView.getContext()).inflate(R.layout.e_recycle_view_item, itemView, false);
 //            icon = (ImageView) itemView.findViewById(R.id.tv_recycle_view_item);
 //            name = (TextView) itemView.findViewById(R.id.tv_name);
 //        }
+
+        public RecycleViewHolder(ViewGroup parent) {
+            super(LayoutInflater.from(parent.getContext()).inflate(R.layout.e_recycle_view_item, parent, false));
+            icon = (ImageView) itemView.findViewById(R.id.tv_recycle_view_item);
+            name = (TextView) itemView.findViewById(R.id.tv_name);
+        }
     }
 }
