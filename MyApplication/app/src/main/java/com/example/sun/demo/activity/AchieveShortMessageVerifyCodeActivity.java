@@ -8,6 +8,8 @@ import com.example.sun.demo.base.BaseActivity;
 import com.example.sun.demo.broadcastReceiver.GetMessageBroadcastReceiver;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 /**
  * Created by sun on 16/6/30.
@@ -17,7 +19,6 @@ public class AchieveShortMessageVerifyCodeActivity extends BaseActivity {
     @Bind(R.id.tv_code)
     EditText mCode;
     private GetMessageBroadcastReceiver mGetMessageBroadcastReceiver;
-
 
     @Override
     public void setContent() {
@@ -32,7 +33,7 @@ public class AchieveShortMessageVerifyCodeActivity extends BaseActivity {
     @Override
     public void setupView() {
         mCenterTitle.setText("aaaa");
-
+        ButterKnife.bind(this);
         //获取短信验证码自动填写
         if (mGetMessageBroadcastReceiver == null) {
             mGetMessageBroadcastReceiver = new GetMessageBroadcastReceiver(mCode);

@@ -8,10 +8,11 @@ import com.example.sun.demo.R;
 import com.example.sun.demo.base.BaseActivity;
 import com.example.sun.demo.event.TestEvent;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import butterknife.Bind;
-import de.greenrobot.event.EventBus;
-import de.greenrobot.event.Subscribe;
-import de.greenrobot.event.ThreadMode;
 
 /**
  * Created by sun on 16/7/1.
@@ -44,7 +45,7 @@ public class GetEventBusActivity extends BaseActivity {
 
     }
 
-    @Subscribe(threadMode = ThreadMode.MainThread)
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void testEventBus(TestEvent event) {
         if (event == null) {
             return;

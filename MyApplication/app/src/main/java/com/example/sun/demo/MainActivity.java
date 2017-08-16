@@ -20,7 +20,7 @@ import com.example.sun.demo.javaDesignPattern.FactoryActivity;
 import java.util.Random;
 
 import butterknife.Bind;
-import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Bind(R.id.tv_get_message_code)

@@ -8,7 +8,7 @@ import com.example.sun.demo.base.BaseActivity;
 import com.example.sun.demo.event.TestEvent;
 
 import butterknife.Bind;
-import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by sun on 16/7/1.

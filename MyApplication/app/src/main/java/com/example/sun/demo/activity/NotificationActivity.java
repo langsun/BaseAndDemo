@@ -118,7 +118,7 @@ public class NotificationActivity extends BaseActivity {
 
         PendingIntent contentItent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
-        notification.setLatestEventInfo(this, contentTitle, contentText, contentItent);
+//        notification.setLatestEventInfo(this, contentTitle, contentText, contentItent);
 
 
 

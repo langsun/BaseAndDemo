@@ -8,9 +8,10 @@ import com.example.sun.demo.R;
 import com.example.sun.demo.base.BaseActivity;
 import com.example.sun.demo.view.MyDialog;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import butterknife.Bind;
-import de.greenrobot.event.Subscribe;
-import de.greenrobot.event.ThreadMode;
 
 /**
  * Created by sun on 16/7/1.
@@ -62,7 +63,7 @@ public class MyDialogActivity extends BaseActivity implements View.OnClickListen
 //        Toast.makeText(MyDialogActivity.this,"ceshi",Toast.LENGTH_SHORT).show();
 //    }
 
-    @Subscribe(threadMode = ThreadMode.MainThread)
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void helloEventBus(String message){
         mEventBus.setText(message);
     }

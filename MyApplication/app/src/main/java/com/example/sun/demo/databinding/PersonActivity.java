@@ -8,11 +8,12 @@ import com.example.sun.demo.R;
 import com.example.sun.demo.base.BaseActivity;
 import com.example.sun.demo.event.DataBindingEvent;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.Random;
 
-import de.greenrobot.event.EventBus;
-import de.greenrobot.event.Subscribe;
-import de.greenrobot.event.ThreadMode;
 
 /**
  * Created by sun on 17/7/21.
@@ -60,7 +61,7 @@ public class PersonActivity extends BaseActivity {
         }
     }
 
-    @Subscribe(threadMode = ThreadMode.MainThread)
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void changePersonData(DataBindingEvent dataBindingEvent) {
         if (dataBindingEvent != null)
             person = dataBindingEvent.person;
