@@ -15,13 +15,9 @@ import com.example.sun.demo.R;
  */
 
 public class A_MyPopupWindow extends PopupWindow {
-    private Context mContext;
-    private View.OnClickListener mOnClickListener;
 
     public A_MyPopupWindow(Context context, View view, View.OnClickListener onClickListener) {
 
-        this.mContext = context;
-        this.mOnClickListener = onClickListener;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View contentView = inflater.inflate(R.layout.a_my_popup_window, null);
         ImageButton imageButton = (ImageButton) contentView.findViewById(R.id.ib_pop);
@@ -31,7 +27,7 @@ public class A_MyPopupWindow extends PopupWindow {
         // 设置SelectPicPopupWindow弹出窗体的高
         this.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
         // 设置SelectPicPopupWindow弹出窗体可点击
-        this.setFocusable(false);
+        this.setFocusable(true);
         this.setOutsideTouchable(true);
     }
 
