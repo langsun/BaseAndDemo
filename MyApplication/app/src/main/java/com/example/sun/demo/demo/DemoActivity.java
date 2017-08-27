@@ -24,6 +24,8 @@ public class DemoActivity extends BaseActivity {
     TextView mRecycleViewActivity;
     @Bind(R.id.tv_ValidatorActivity)
     TextView mValidatorActivity;
+    @Bind(R.id.tv_G_OKHttpActivity)
+    TextView mOKHttpActivity;
     @Override
     public void setContent() {
         setContentView(R.layout.demo_activity);
@@ -63,5 +65,9 @@ public class DemoActivity extends BaseActivity {
     @OnClick(R.id.tv_ValidatorActivity)
     public void ValidatorActivity(){
         startActivity(new Intent(DemoActivity.this,F_ValidatorActivity.class));
+    }
+    @OnClick(R.id.tv_G_OKHttpActivity)
+    public void G_OKHttpActivity(){
+        startActivity(new Intent(DemoActivity.this,G_OKHttpActivity.class));
     }
 }
