@@ -56,4 +56,15 @@
         android:gravity="center"
         android:background="#00Acff"/>
 
+    <TextView
+        android:id="@+id/tv_ValidatorActivity"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="这是一个F_ValidatorActivity"
+        android:gravity="center"
+        android:background="#00Acff"/>
+
 </LinearLayout>

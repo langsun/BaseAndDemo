@@ -6,4 +6,9 @@
         <item>弱</item>
         <item>强</item>
     </string-array>
+
+    <string name="input_phone">请输入手机号</string>
+    <string name="input_email">请输入邮箱</string>
+    <string name="input_pwd">请输入密码</string>
+    <string name="input_pwd_length">请输入6~18位密码</string>
 </resources>

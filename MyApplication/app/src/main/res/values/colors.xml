@@ -13,4 +13,6 @@
 
     <!-- 水波纹效果 -->
     <color name="rippelColor">#CCCCCC</color>
+
+    <color name="white">#ffffff</color>
 </resources>

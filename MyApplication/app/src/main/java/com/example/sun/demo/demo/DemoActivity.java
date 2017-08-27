@@ -22,6 +22,8 @@ public class DemoActivity extends BaseActivity {
     TextView mRippleActivity;
     @Bind(R.id.tv_RecycleViewActivity)
     TextView mRecycleViewActivity;
+    @Bind(R.id.tv_ValidatorActivity)
+    TextView mValidatorActivity;
     @Override
     public void setContent() {
         setContentView(R.layout.demo_activity);
@@ -57,5 +59,9 @@ public class DemoActivity extends BaseActivity {
     @OnClick(R.id.tv_RecycleViewActivity)
     public void RecycleViewActivity(){
         startActivity(new Intent(DemoActivity.this,E_RecycleViewActivity.class));
+    }
+    @OnClick(R.id.tv_ValidatorActivity)
+    public void ValidatorActivity(){
+        startActivity(new Intent(DemoActivity.this,F_ValidatorActivity.class));
     }
 }
