@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_first"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#00acff"
+        android:gravity="center"
+        android:text="first"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_second"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#00ac00"
+        android:gravity="center"
+        android:text="second"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+    <TextView
+        android:id="@+id/tv_third"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#99acff"
+        android:gravity="center"
+        android:text="third"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+    <TextView
+        android:id="@+id/tv_fourth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#0088ff"
+        android:gravity="center"
+        android:text="fourth"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+    <TextView
+        android:id="@+id/tv_fifth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="fifth"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+    <TextView
+        android:id="@+id/tv_sixth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#00ffff"
+        android:gravity="center"
+        android:text="sixth"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#123456"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="点击按钮，横向拼接"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+  <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#654321"
+        android:gravity="center"
+        android:text="点击按钮，纵向拼接"
+      android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>

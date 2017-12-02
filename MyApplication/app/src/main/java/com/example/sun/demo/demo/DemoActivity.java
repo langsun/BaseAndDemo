@@ -70,4 +70,8 @@ public class DemoActivity extends BaseActivity {
     public void G_OKHttpActivity(){
         startActivity(new Intent(DemoActivity.this,G_OKHttpActivity.class));
     }
+    @OnClick(R.id.tv_H_ScreenCaptureActivity)
+    public void H_ScreenCaptureActivity(){
+        startActivity(new Intent(DemoActivity.this,H_ScreenCaptureActivity.class));
+    }
 }
